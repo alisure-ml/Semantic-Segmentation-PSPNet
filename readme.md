@@ -1,10 +1,16 @@
-### paper
+### Paper
 > `Pyramid Scene Parsing Network.pdf`
 
 ### Run Image
 1. 下载模型[Google Drive](https://drive.google.com/open?id=0B9CKOTmy0DyaV09LajlTa0Z2WFU)，放入`model` 目录.
 2. 准备图片，运行`RunnerOne.py` 即可:  
     `Runner(is_flip=False, num_classes=19, log_dir="./model", save_dir="./output").run("data/input/test.png")`
+
+### Run Result
+Input image                 |  Output image
+:--------------------------:|:---------------------------:
+![](readme/input/test.jpg) | ![](readme/output/test.jpg)
+![](readme/input/test.png) | ![](readme/output/test.png)
 
 ### 1. Data - ImageReader.py
 - `ReaderTrainImageAndLabel` 
@@ -29,7 +35,6 @@
     - 使用模型，输入是一张图片，输出是语义分割结果
 - `RunnerAll.py`
     - 使用模型，输入是图片的list，输出是语义分割结果
-
 
 ### Reference
 * [hellochick/PSPNet-tensorflow](https://github.com/hellochick/PSPNet-tensorflow)
